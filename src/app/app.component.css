@@ -5,6 +5,20 @@ table, th, td {
     border: 1px solid black;
 }
 
+#black_row{
+    background-color:black; 
+    color: white
+}
+
 #red_row{
     background-color:#ff0000; 
+    color: white
+}
+
+#yellow_row{
+    background-color:yellow; 
+}
+
+#green_row{
+    background-color:green; 
 }
