@@ -20,10 +20,51 @@
 <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
 
     <agm-marker *ngFor="let m of markers; let i=index" [latitude]="m.lat" [longitude]="m.lng">
-        <agm-info-window >
+        <agm-info-window>
             <strong>
-
-                <ol>
+                <table style ="width:30%">
+                    <tr>
+                        <th>
+                            {{m.name}}
+                        </th>
+                        <th>
+                            Count
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deceased(Black):
+                        </td>
+                        <td>
+                            {{m.deceased}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Immediate(Red):
+                        </td>
+                        <td>
+                            {{m.immediate}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Delayed(Yellow):
+                        </td>
+                        <td>
+                            {{m.delayed}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Minor(Green):
+                        </td>
+                        <td>
+                            {{m.minor}}
+                        </td>
+                    </tr>
+                </table>
+                <!-- <ol>
                   <ins> {{m.name}}</ins>     
                     <li>
                         Deceased(Black): {{m.deceased}}</li>
@@ -33,7 +74,7 @@
                         Delayed(Yellow): {{m.delayed}}</li>
                     <li>
                         Minor(Green): {{m.minor}}</li>
-                </ol>
+                </ol> -->
             </strong>
         </agm-info-window>
 
