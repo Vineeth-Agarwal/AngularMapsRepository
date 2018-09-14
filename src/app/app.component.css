@@ -5,3 +5,6 @@ table, th, td {
     border: 1px solid black;
 }
 
+#red_row{
+    background-color:#ff0000; 
+}
