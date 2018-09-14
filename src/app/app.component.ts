@@ -6,62 +6,58 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  zoom:number=10;
+  zoom:number=9 ;
   lat=40.349841283655195;
   lng=-94.8827696546299;
   // Markers
   markers:marker[]=[
     {
-      name: 'location1',
+      name: 'Report1',
       deceased:0,
       immediate:2,
       delayed:3,
       minor:10,
       lat:40.349841283655195,
-      lng:-94.8827696546299,
-      draggable:true
+      lng:-94.8827696546299
+      // ,draggable=true
     },
     {
-      name: 'location2',
+      name: 'Report2',
       deceased:0,
       immediate:2,
       delayed:3,
       minor:10,      
       lat:40.549841283655195,
-      lng:-94.6827696546299,
-      draggable:true
+      lng:-94.6827696546299
     },
     {
-      name: 'location3',
+      name: 'Report3',
       deceased:0,
       immediate:2,
       delayed:3,
       minor:10,
       lat:40.549841283655195,
-      lng:-94.4827696546299,
-      draggable:true
+      lng:-94.4827696546299
     },
 
     {
-      name: 'location4',
+      name: 'Report4',
       deceased:0,
       immediate:2,
       delayed:3,
       minor:10,
       lat:40.249841283655195,
-      lng:-94.9827696546299,
-      draggable:true
+      lng:-94.9827696546299
     },
 
     {
-      name: 'location5',
+      name: 'Report5',
       deceased:0,
       immediate:2,
       delayed:3,
       minor:10,
       lat:40.249841283655195,
-      lng:-94.2827696546299,
-      draggable:true
+      lng:-94.2827696546299
     }
 
 
@@ -79,8 +75,9 @@ interface marker{
   delayed:number;
   minor:number;
   lat:number;
-  lng:number;
-  draggable:boolean
+  lng:number
+  // ;
+  // draggable:boolean
 }
 
   // onChoseLocation(event){

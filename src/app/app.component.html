@@ -1,15 +1,39 @@
 <!-- <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)"> -->
-<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]=false [zoomControl]="false" (mapClick)="mapClicked($event)">
 
-    <agm-marker *ngFor="let m of markers; let i=index" (markerClick)="clickedMarker(m,i)" [latitude]="m.lat" [longitude]="m.lng"
-        [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m,$event)">
-        <agm-info-window>
+<!-- 
+        [latitude] is an agm-map object taking values of lat metioned in component.ts.
+        [Zoom] is a auto zoom functionality while loading the map taking value from component.ts
+        (mapClick) is a functionality that takes whenever clicked on map, this.coords object will give
+         the lat and long results which we can set to lat and lng in component.ts to change runtime
+         [markerDraggable] is used to drag the marker on the map.
+         (dragEnd) is used to do something when the marker dragging stopped by user by calling the method 
+         we might write in markerDragEnd()
+         (markerClick) will do something we write when a marker is clicked.
+
+     -->
+<!-- <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]=false 
+[zoomControl]="false" (mapClick)="mapClicked($event)"> -->
+
+<!-- <agm-marker *ngFor="let m of markers; let i=index" (markerClick)="clickedMarker(m,i)" 
+    [latitude]="m.lat" [longitude]="m.lng"  [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m,$event)"> -->
+
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+
+    <agm-marker *ngFor="let m of markers; let i=index" [latitude]="m.lat" [longitude]="m.lng">
+        <agm-info-window >
             <strong>
-                {{m.name}}\
-                <br>Deceased(Black):{{m.deceased}}\
-                <br>Immediate(Red):{{m.immediate}}\
-                <br>Delayed(Yellow):{{m.delayed}}\
-                <br>Minor(Green):{{m.minor}}
+
+                <ol>
+                  <ins> {{m.name}}</ins>     
+                    <li>
+                        Deceased(Black): {{m.deceased}}</li>
+                    <li>
+                        Immediate(Red): {{m.immediate}}</li>
+                    <li>
+                        Delayed(Yellow): {{m.delayed}}</li>
+                    <li>
+                        Minor(Green): {{m.minor}}</li>
+                </ol>
             </strong>
         </agm-info-window>
 
