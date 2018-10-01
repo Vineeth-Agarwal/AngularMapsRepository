@@ -17,48 +17,48 @@
 <!-- <agm-marker *ngFor="let m of markers; let i=index" (markerClick)="clickedMarker(m,i)" 
     [latitude]="m.lat" [longitude]="m.lng"  [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m,$event)"> -->
 
-<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+<agm-map [latitude]="lat" [longitude]="lng"  [zoomControl]="true">
 
     <agm-marker *ngFor="let m of markers; let i=index" [latitude]="m.lat" [longitude]="m.lng">
         <agm-info-window>
             <strong>
                 <table style ="width:30%">
                     <tr>
-                        <th>
+                        <!-- <th>
                             {{m.name}}
-                        </th>
+                        </th> -->
                         <th>
                             Count
                         </th>
                     </tr>
                     <tr id="black_row">
-                        <td>
+                        <!-- <td>
                             Deceased:
-                        </td>
+                        </td> -->
                         <td align="center">
                             {{m.deceased}}
                         </td>
                     </tr>
                     <tr id="red_row">
-                        <td>
+                        <!-- <td>
                             Immediate:
-                        </td>
+                        </td> -->
                         <td align="center">
                             {{m.immediate}}
                         </td>
                     </tr>
                     <tr id="yellow_row">
-                        <td>
+                        <!-- <td>
                             Delayed:
-                        </td>
+                        </td> -->
                         <td align="center">
                             {{m.delayed}}
                         </td>
                     </tr>
                     <tr id="green_row">
-                        <td>
+                        <!-- <td>
                             Minor:
-                        </td>
+                        </td> -->
                         <td align="center">
                             {{m.minor}}
                         </td>

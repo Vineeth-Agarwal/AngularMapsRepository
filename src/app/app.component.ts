@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  zoom:number=9 ;
+  zoom:number=190 ;
   lat=40.349841283655195;
   lng=-94.8827696546299;
   // Markers
